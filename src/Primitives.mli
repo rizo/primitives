@@ -22,8 +22,10 @@ end
 
 module type Ord = sig
   type t
+  (** The type for ordered values. *)
 
   val cmp : t -> t -> ordering
+  (** Returns an {!type:ordering} between two values. *)
 end
 
 
@@ -201,7 +203,10 @@ end
 
     Builtin data types in OCaml. *)
 
-(** Unit type and operations. *)
+(** Unit type and operations.
+
+    The [unit] type has a single inhabitant, called unit. It represents values
+    with no computational content. *)
 module Unit : sig
   type t = unit
 
